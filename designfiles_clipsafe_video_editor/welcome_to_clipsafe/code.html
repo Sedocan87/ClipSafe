@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welcome to ClipSafe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4A90E2",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4">
+<div class="flex h-full w-full max-w-2xl grow flex-col items-center justify-center space-y-12">
+<div class="flex flex-col items-center gap-4 text-center">
+<svg class="h-16 w-16 text-primary" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 5.5H7.5C5.29086 5.5 3.5 7.29086 3.5 9.5V14.5C3.5 16.7091 5.29086 18.5 7.5 18.5H16.5C18.7091 18.5 20.5 16.7091 20.5 14.5V9.5C20.5 7.29086 18.7091 5.5 16.5 5.5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M9.5 3.5V7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M14.5 3.5V7.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 12L15 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 12V15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Welcome to ClipSafe</p>
+<p class="text-[#888888] text-lg font-normal leading-normal">Your Privacy-First Video Editor.</p>
+</div>
+<div class="w-full">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+<div class="flex flex-1 flex-col gap-3 rounded-lg border border-white/10 bg-[#1E1E1E] p-4 text-center items-center">
+<span class="material-symbols-outlined text-[#888888]">verified_user</span>
+<div class="flex flex-col gap-1">
+<h2 class="text-base font-bold leading-tight text-white">Client-Side Processing</h2>
+<p class="text-sm font-normal leading-normal text-[#888888]">Your Data Stays Yours.</p>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-3 rounded-lg border border-white/10 bg-[#1E1E1E] p-4 text-center items-center">
+<span class="material-symbols-outlined text-[#888888]">cloud_off</span>
+<div class="flex flex-col gap-1">
+<h2 class="text-base font-bold leading-tight text-white">Professional Editing Tools</h2>
+<p class="text-sm font-normal leading-normal text-[#888888]">No Cloud Uploads.</p>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-3 rounded-lg border border-white/10 bg-[#1E1E1E] p-4 text-center items-center">
+<span class="material-symbols-outlined text-[#888888]">badge</span>
+<div class="flex flex-col gap-1">
+<h2 class="text-base font-bold leading-tight text-white">Own Your Content</h2>
+<p class="text-sm font-normal leading-normal text-[#888888]">Always.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex w-full max-w-sm flex-col items-stretch gap-3">
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold leading-normal tracking-[0.015em] text-white transition-opacity hover:opacity-90 active:opacity-80">
+<span class="truncate">Start Editing</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ClipSafe - Projects Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-[#121212] text-[#EAEAEA]">
+<div class="flex h-screen font-display">
+<aside class="w-64 bg-[#1E1E1E] flex flex-col shrink-0 border-r border-[#333333] p-4">
+<div class="flex items-center gap-2 mb-8 px-2">
+<svg class="size-8" fill="#007AFF" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
+</svg>
+<h1 class="text-white text-xl font-bold">ClipSafe</h1>
+</div>
+<div class="flex flex-col gap-2 mb-6">
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-[#007AFF] text-white text-sm font-medium hover:bg-blue-600">
+<span class="material-symbols-outlined text-xl">add</span>
+<span>New Project</span>
+</button>
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-transparent text-gray-300 text-sm font-medium hover:bg-white/10 border border-[#333333]">
+<span class="material-symbols-outlined text-xl">create_new_folder</span>
+<span>Create New Folder</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-md bg-[#007AFF]/20 text-white" href="#">
+<span class="material-symbols-outlined fill text-xl text-[#007AFF]">folder</span>
+<p class="text-sm font-medium">All Projects</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/5 cursor-pointer text-gray-300" href="#">
+<span class="material-symbols-outlined text-xl">archive</span>
+<p class="text-sm font-medium">Archived</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/5 cursor-pointer text-gray-300" href="#">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+<p class="text-sm font-medium">Templates</p>
+</a>
+</nav>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="flex items-center justify-between border-b border-solid border-[#333333] px-8 py-4 shrink-0">
+<h2 class="text-2xl font-bold text-white">All Projects</h2>
+<div class="flex items-center gap-4">
+<label class="flex items-center w-72 h-10 bg-[#1E1E1E] rounded-lg px-3 border border-[#333333] focus-within:border-[#007AFF] transition-colors">
+<span class="material-symbols-outlined text-gray-400 mr-2">search</span>
+<input class="w-full bg-transparent text-white placeholder-gray-400 text-sm border-none focus:ring-0 p-0" placeholder="Search projects..."/>
+</label>
+<div class="flex items-center gap-2">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-[#1E1E1E] text-white w-10 border border-[#333333] hover:bg-[#333333]">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-transparent text-gray-400 w-10 hover:bg-[#1E1E1E]">
+<span class="material-symbols-outlined text-xl">list</span>
+</button>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8">
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 px-3 py-1.5 bg-[#1E1E1E] border border-[#333333] rounded-md text-sm text-gray-300 hover:bg-[#333333]">
+<span>Date Modified</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex items-center gap-2 px-3 py-1.5 bg-[#1E1E1E] border border-[#333333] rounded-md text-sm text-gray-300 hover:bg-[#333333]">
+<span>Duration</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex items-center gap-2 px-3 py-1.5 bg-[#1E1E1E] border border-[#333333] rounded-md text-sm text-gray-300 hover:bg-[#333333]">
+<span>Tags</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-lg font-semibold text-white mb-4">Folders</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<div class="flex flex-col items-start gap-2 p-4 bg-[#1E1E1E] rounded-lg cursor-pointer hover:bg-[#252525] transition-colors">
+<span class="material-symbols-outlined text-3xl text-[#007AFF]">folder</span>
+<p class="font-medium text-white">Client Work</p>
+<p class="text-xs text-gray-400">12 Projects</p>
+</div>
+<div class="flex flex-col items-start gap-2 p-4 bg-[#1E1E1E] rounded-lg cursor-pointer hover:bg-[#252525] transition-colors">
+<span class="material-symbols-outlined text-3xl text-[#007AFF]">folder</span>
+<p class="font-medium text-white">Social Media</p>
+<p class="text-xs text-gray-400">8 Projects</p>
+</div>
+<div class="flex flex-col items-start gap-2 p-4 bg-[#1E1E1E] rounded-lg cursor-pointer hover:bg-[#252525] transition-colors">
+<span class="material-symbols-outlined text-3xl text-[#007AFF]">folder</span>
+<p class="font-medium text-white">Personal</p>
+<p class="text-xs text-gray-400">5 Projects</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-white mb-4">Recent Projects</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="bg-[#1E1E1E] rounded-lg overflow-hidden group">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Video thumbnail of a mountain landscape" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGLnyB-4fEmHabSZxOa8zUZmOJzp5cZ44RSvVFeLA9Xu0gN5Tj3al08H4KO1x66O3X3wTy29ZkpxekgLCoHNP0cXIkuB5SsS3pJ8oYQ59Iqk14wbR8ntwNRRldRMwnxyxwmKy1JDHG1VwXNhGYsEHlPh1JR5Yuu0igxQXQP7EJ_7jDCtj4JMo6YCRylAVqYWS00Op_Fn9xhoRu53zilw5TYqJPwXrMw-1T8RjCryJmzt7YuwJSNnIaujUsTC-qk6jL7sRi7SHwI03p");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white/20 backdrop-blur-sm rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-4xl leading-none">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-medium text-white truncate">Mountain Trip Edit</h4>
+<p class="text-sm text-gray-400">Modified 2 hours ago</p>
+</div>
+<button class="p-1 text-gray-400 hover:text-white hover:bg-white/10 rounded-full">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-[#1E1E1E] rounded-lg overflow-hidden group">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Video thumbnail of a person surfing" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoBnhXSwVgi72z-f7glPFvaQgc6jJ_SRetIgzbI5Fj3EryFoee7O23pljx5YsIlAOG7zQUh7SuvLrHXhAxP1_UGHyDXZXH7QRwRF_76m_-YWGeGcAxRGAJowlE7iSC3keuM4kIVEJ0wWC-a-pP7KzPj93-Yi3BVzWVuoxZfqfXc3yfbqu-xoXqEu9JOJ_Jz__8LL66aay5-K-QlCKKXI8JxOFkEeiEQnKjKKhkUh3hlOCCE5S_EIdkB2bvykbEk9vh2WIkSeMNzoFQ");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white/20 backdrop-blur-sm rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-4xl leading-none">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-medium text-white truncate">Surfing Adventure</h4>
+<p class="text-sm text-gray-400">Modified yesterday</p>
+</div>
+<button class="p-1 text-gray-400 hover:text-white hover:bg-white/10 rounded-full">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-[#1E1E1E] rounded-lg overflow-hidden group">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Video thumbnail of a forest path" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfSzK4ekc0JZhJW_XtTYcGl-lwv-sExsm96kINQdx964uGX7J0d7SC5-UH6yqkLMCdz4mR60J50ggwKnm_NbQG-GKDSaN99jKpZr-fGFrPAVzI0Kaz-5TUHAZL01j6NTXGb4AubbCbkkSRLnR8fIUXs0bnIdVYnLHBVrKfQ7TwyfuCgzc7RWdhN-J6G3LEoYInTDu8ETKWStEunI0WYwopgPLsM-pn7-DqUSf6Z6UzeJnvYJo1PwZOPxCe8lpNqhd5wBT25X3SHLU3");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white/20 backdrop-blur-sm rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-4xl leading-none">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-medium text-white truncate">Forest Trail Vlog</h4>
+<p class="text-sm text-gray-400">Modified 3 days ago</p>
+</div>
+<button class="p-1 text-gray-400 hover:text-white hover:bg-white/10 rounded-full">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-[#1E1E1E] rounded-lg overflow-hidden group">
+<div class="relative">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Video thumbnail of a city at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRimxqDNK-SarAUe8gqgylPokH7hEuDd7Kl1mTHgn09RT9X7HzuLnHbZvsKCG1jqv8ndoDODvecp80QgEyhaFGnfE4cMDl_KgD7KPJy-SizET3sZgRGhdaOis5HkwdeGHMFAj2xbtiHoSM_MymdBTqTs-w1JL5CNNBB-fWz4jx5raw92kzhGdxgWPC2VbXSNdFyqKlVzroNkkaaLN-OGFrRrH1VTCCYiPDLRTRX1cwTRRNQLyjw5qxRE8E21XqaT4PIqbd_4_nw0Ls");'></div>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white/20 backdrop-blur-sm rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-4xl leading-none">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-medium text-white truncate">City Night Timelapse</h4>
+<p class="text-sm text-gray-400">Modified 5 days ago</p>
+</div>
+<button class="p-1 text-gray-400 hover:text-white hover:bg-white/10 rounded-full">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="text-xs text-center text-gray-600 py-2 bg-[#121212] border-t border-[#333333] shrink-0 px-8">
+<span class="material-symbols-outlined text-xs align-middle mr-1">lock</span> All processing is done on your device
+    </footer>
+</div></main>
+</div>
+</body></html>

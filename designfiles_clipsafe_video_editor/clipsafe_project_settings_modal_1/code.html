@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ClipSafe - Project Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#5a5cf2",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101122",
+              "danger": "#ef4444",
+              "danger-hover": "#dc2626",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(146,147,201)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
+      }
+      .form-select {
+        background-image: var(--select-button-svg);
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 1.5em 1.5em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding-right: 2.5rem;
+      }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4" style="background-color: rgba(0, 0, 0, 0.5);">
+<div class="w-full max-w-2xl rounded-xl border border-[#333333] bg-[#1E1E1E] p-8 shadow-2xl">
+<div class="flex items-start justify-between mb-8">
+<h1 class="text-white text-2xl font-bold leading-tight tracking-tight">Project Settings</h1>
+<button class="text-[#A0A0A0] hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-[#A0A0A0] text-sm font-medium leading-normal" for="project-name">Project Name</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#2A2A2A] h-12 placeholder:text-[#666666] px-4 text-base font-normal leading-normal" id="project-name" type="text" value="My Awesome Video"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-[#A0A0A0] text-sm font-medium leading-normal" for="resolution">Resolution / Aspect Ratio</label>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#2A2A2A] h-12 placeholder:text-[#666666] px-4 text-base font-normal leading-normal" id="resolution">
+<option value="1080p">1080p (16:9)</option>
+<option value="4k">4K (16:9)</option>
+<option value="square">Square (1:1)</option>
+<option value="vertical">Vertical (9:16)</option>
+<option value="custom">Custom</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#A0A0A0] text-sm font-medium leading-normal" for="frame-rate">Frame Rate</label>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#2A2A2A] h-12 placeholder:text-[#666666] px-4 text-base font-normal leading-normal" id="frame-rate">
+<option value="24">24 fps</option>
+<option selected="" value="30">30 fps</option>
+<option value="60">60 fps</option>
+<option value="custom">Custom</option>
+</select>
+</div>
+</div>
+<hr class="border-[#333333] my-2"/>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<label class="text-white text-base font-medium leading-normal" for="auto-save-toggle">Auto-save</label>
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-[#333333] p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white transition-transform" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" id="auto-save-toggle" type="checkbox"/>
+</label>
+</div>
+<div class="flex items-center gap-4 transition-opacity" id="auto-save-frequency-container">
+<label class="text-[#A0A0A0] text-sm font-medium leading-normal" for="auto-save-frequency">Save every (minutes)</label>
+<input class="form-input flex w-24 min-w-0 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#2A2A2A] h-10 placeholder:text-[#666666] px-3 text-base font-normal leading-normal text-center" id="auto-save-frequency" type="number" value="5"/>
+</div>
+</div>
+</div>
+<hr class="border-[#333333] mt-8 mb-6"/>
+<div class="flex justify-between items-center gap-4">
+<button class="px-5 py-2.5 rounded-lg text-danger hover:bg-danger/10 font-semibold text-sm transition-colors">Delete Project</button>
+<div class="flex gap-4">
+<button class="px-5 py-2.5 rounded-lg text-[#A0A0A0] bg-[#2A2A2A] border border-[#333333] hover:bg-[#333333] font-semibold text-sm transition-colors">Cancel</button>
+<button class="px-5 py-2.5 rounded-lg text-white bg-primary hover:bg-opacity-80 font-semibold text-sm transition-colors">Save Changes</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ClipSafe - Video Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-[#121212] text-[#EAEAEA]">
+<div class="flex flex-col h-screen font-display">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#333333] px-6 py-3 shrink-0">
+<div class="flex items-center gap-4">
+<svg class="size-6" fill="#007AFF" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
+</svg>
+<h2 class="text-white text-lg font-bold">ClipSafe</h2>
+</div>
+<div class="flex flex-1 justify-center items-center gap-2">
+<input class="bg-transparent text-white text-center text-sm font-medium border-none focus:ring-0 focus:outline-none w-40 hover:bg-[#1E1E1E] rounded-md py-1" type="text" value="Untitled Project"/>
+</div>
+<div class="flex items-center justify-end gap-3">
+<div class="flex items-center gap-1">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-transparent text-white w-10 hover:bg-[#1E1E1E]">
+<span class="material-symbols-outlined text-xl">fast_rewind</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-transparent text-white w-10 hover:bg-[#1E1E1E]">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-transparent text-white w-10 hover:bg-[#1E1E1E]">
+<span class="material-symbols-outlined text-xl">fast_forward</span>
+</button>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-[#1E1E1E] text-white text-sm font-medium hover:bg-[#333333]">
+<span>Share</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-[#007AFF] text-white text-sm font-medium hover:bg-blue-600">
+<span>Export</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBm8iAgSEa2NV-IJzBAjlkpqzlaXWRGdRxfzeRLbwQaB5942NT92s0LZ8jiDrFTQG4UvawpMSF6Z5LW0Gn8ZkEhsYsCA8jnLCvyxPqGGxzBcFoJSl-Mj3oXgEceYgme_OJo0FE7bpCn8Yw0fwK8dSsMPBKaOEJGOwq5skadoTi_c2vkLWER6HzzN87-p1Eqf2Yfq1pDQAFr1ilh5-4T6S6kvRrOZHdAr0zLvNzl7ONvhXYqnCv_ppxiL9Cbi524X-QJFINh-j4hO2HW");'></div>
+</div>
+</header>
+<main class="flex flex-1 overflow-hidden">
+<aside class="w-[280px] bg-[#1E1E1E] flex flex-col shrink-0 border-r border-[#333333]">
+<div class="flex border-b border-[#333333]">
+<button class="flex-1 text-sm font-medium py-3 text-gray-400 hover:bg-black/10">Assets</button>
+<button class="flex-1 text-sm font-medium py-3 text-[#EAEAEA] border-b-2 border-[#007AFF] bg-black/10">Tools</button>
+</div>
+<div class="flex-1 p-4 overflow-y-auto">
+<div class="grid grid-cols-3 gap-3">
+<div class="flex flex-col items-center justify-center gap-2 p-2 rounded-md aspect-square bg-[#007AFF]/20 text-[#007AFF] cursor-pointer">
+<span class="material-symbols-outlined text-3xl">arrow_selector_tool</span>
+<p class="text-xs font-medium text-white">Select</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 p-2 rounded-md aspect-square hover:bg-white/5 cursor-pointer text-gray-300">
+<span class="material-symbols-outlined text-3xl">cut</span>
+<p class="text-xs font-medium">Razor</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 p-2 rounded-md aspect-square hover:bg-white/5 cursor-pointer text-gray-300">
+<span class="material-symbols-outlined text-3xl">crop</span>
+<p class="text-xs font-medium">Crop</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 p-2 rounded-md aspect-square hover:bg-white/5 cursor-pointer text-gray-300">
+<span class="material-symbols-outlined text-3xl">zoom_in_map</span>
+<p class="text-xs font-medium">Pan &amp; Zoom</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-2 p-2 rounded-md aspect-square hover:bg-white/5 cursor-pointer text-gray-300">
+<span class="material-symbols-outlined text-3xl">pan_tool</span>
+<p class="text-xs font-medium">Hand</p>
+</div>
+</div>
+</div>
+</aside>
+<section class="flex-1 flex flex-col bg-[#121212]">
+<div class="flex-1 flex items-center justify-center p-8 relative">
+<div class="w-full max-w-4xl bg-black aspect-video rounded-lg flex items-center justify-center" data-alt="Main video preview area showing a placeholder image of mountains.">
+<span class="text-gray-500">Import media to start your project</span>
+</div>
+<div class="absolute bottom-12 right-8 flex items-center gap-2 bg-[#1E1E1E] p-1 rounded-md border border-[#333333]">
+<button class="text-xs px-2 py-1 rounded hover:bg-white/10">Fit</button>
+<button class="text-xs px-2 py-1 rounded bg-white/10">50%</button>
+<button class="text-xs px-2 py-1 rounded hover:bg-white/10">100%</button>
+<div class="w-px h-4 bg-[#333333] mx-1"></div>
+<span class="text-xs font-medium px-2 py-1 text-gray-300">1080p</span>
+</div>
+</div>
+<div class="h-[250px] bg-[#1E1E1E] border-t border-[#333333] flex flex-col">
+<div class="flex items-center justify-between p-2 border-b border-[#333333] shrink-0">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 text-sm px-3 py-1 bg-transparent border border-[#333333] rounded-md hover:bg-white/5">
+<span class="material-symbols-outlined text-base">add</span>
+                                Add Track
+                            </button>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-gray-400">00:00:00:00</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-gray-400">zoom_out</span>
+<input class="w-24 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer range-sm" max="100" min="1" type="range" value="50"/>
+<span class="material-symbols-outlined text-lg text-gray-400">zoom_in</span>
+</div>
+</div>
+<div class="flex-1 overflow-x-auto overflow-y-hidden p-2 relative">
+<div class="absolute top-0 bottom-0 w-0.5 bg-[#007AFF] z-10" style="left: 20%;">
+<div class="absolute -top-1 -left-2.5 size-5 bg-[#007AFF] rounded-full border-2 border-[#1E1E1E]"></div>
+</div>
+<div class="h-full flex flex-col gap-2">
+<div class="h-14 bg-[#121212]/50 rounded-md flex items-center justify-center text-gray-500 text-sm">
+                                Drag media here to create a new track
+                            </div>
+</div>
+</div>
+</div>
+</section>
+<aside class="w-[280px] bg-[#1E1E1E] flex flex-col shrink-0 border-l border-[#333333]">
+<div class="p-4 border-b border-[#333333]">
+<h3 class="text-base font-semibold text-white">Properties</h3>
+</div>
+<div class="flex-1 flex items-center justify-center p-4">
+<p class="text-sm text-center text-gray-500">Select an item on the timeline to see its properties.</p>
+</div>
+</aside>
+</main>
+<footer class="text-xs text-center text-gray-600 py-1 bg-[#121212] border-t border-[#333333]">
+<span class="material-symbols-outlined text-xs align-middle mr-1">lock</span> All processing is done on your device
+        </footer>
+</div>
+</body></html>
