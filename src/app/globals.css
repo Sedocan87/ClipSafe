@@ -3,12 +3,60 @@
 @tailwind utilities;
 
 @theme {
+  /* From code.html for landing page */
   --color-primary: #4A90E2;
   --color-background-light: #f6f6f8;
   --color-background-dark: #121212;
-  --font-display: "Inter", "sans-serif";
+
+  /* From README.md design system */
+  --color-bg-primary: #0A0A0A;
+  --color-bg-secondary: #151515;
+  --color-bg-tertiary: #1F1F1F;
+  --color-accent-primary: #6366F1;
+  --color-accent-secondary: #8B5CF6;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #A3A3A3;
+  --color-border: #262626;
+  --color-bg-primary-light: #FFFFFF;
+  --color-bg-secondary-light: #F9FAFB;
+  --color-bg-tertiary-light: #F3F4F6;
+
+  --font-display: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-2xl: 1.5rem;
 }
 
 body {
   @apply bg-background-light dark:bg-background-dark font-display text-[#EAEAEA];
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-size: 24px;
 }
