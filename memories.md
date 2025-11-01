@@ -1,0 +1,1 @@
+- The user has instructed to skip the Storybook setup for the project.
